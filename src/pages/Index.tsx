@@ -6,8 +6,8 @@ import { toast } from "sonner";
 import parkingImage from "@/assets/parking-area.jpg";
 import blockImage from "@/assets/block-scale.jpg";
 
-const ADDRESS = "Strada Florilor 42, Bloc B3, Scara 2, Etaj 4, Ap. 18, București, Sector 3";
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Strada+Florilor+42+București+Sector+3";
+const ADDRESS = "Calea Bucovinei nr. 75, Bloc 5, Scara C, Ap. 43, Suceava, Câmpulung Moldovenesc";
+const GOOGLE_MAPS_URL = "https://www.google.com/maps?q=47.527320861816406,25.56754493713379&z=17&hl=en";
 
 const Index = () => {
   const [copied, setCopied] = useState(false);
@@ -33,10 +33,11 @@ const Index = () => {
       <header className="py-8 px-4 text-center border-b border-border">
         <div className="flex items-center justify-center gap-2 mb-2">
           <MapPin className="w-6 h-6 text-primary" />
-          <h1 className="text-2xl font-semibold text-foreground">Locația Mea</h1>
+          <h1 className="text-2xl font-semibold text-foreground">PDR's HQ</h1>
         </div>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Bine ai venit! Aici găsești toate informațiile pentru a ajunge la mine.
+          Bine ai venit, rău ai nimerit! <br/>
+          Aici găsești toate informațiile pentru a ajunge la mine.
         </p>
       </header>
 
@@ -87,11 +88,23 @@ const Index = () => {
             <img 
               src={parkingImage} 
               alt="Zona de parcare" 
-              className="w-full h-64 object-cover"
+              className="w-full object-cover"
+              style={{height: '600px'}}
             />
-            <p className="p-4 text-sm text-muted-foreground">
-              Parcarea se află în fața blocului. Locurile libere sunt de obicei în zona marcată.
-            </p>
+            <div className="p-4">
+              <p className=" text-sm text-muted-foreground">
+                Parcarea se află pe strada cu Lidl-ul.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Sau poți parca în parcarea Lidl-ului.
+              </p>
+              <p className=" text-sm text-muted-foreground">
+               Sau unde vrei tu.
+              </p>
+              <p className=" text-sm text-muted-foreground">
+                Sau dacă n-ai mașină, spune-i elicopterului să te lase pe bloc.
+              </p>
+            </div>
           </CardContent>
         </Card>
 
@@ -105,10 +118,11 @@ const Index = () => {
             <img 
               src={blockImage} 
               alt="Scara blocului" 
-              className="w-full h-64 object-cover"
+              className="w-full object-cover"
+              style={{height: '600px'}}
             />
             <p className="p-4 text-sm text-muted-foreground">
-              Blocul B3 se află în partea centrală a ansamblului. Intră pe scara 2.
+              N-ar trebui să fie complicat
             </p>
           </CardContent>
         </Card>
@@ -117,7 +131,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-6 px-4 text-center border-t border-border">
         <p className="text-sm text-muted-foreground">
-          Te aștept cu drag! 🏠
+          10 lei taxă de intrare! 🏠
         </p>
       </footer>
     </div>
